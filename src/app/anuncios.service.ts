@@ -8,7 +8,7 @@ import { anuncio } from './anuncios';
 })
 export class AnunciosService {
 
-  url = 'localhost:3000/anuncios';
+  url = "http://localhost:3000/anuncios";
 
   constructor(private http : HttpClient) { }
 
@@ -16,7 +16,7 @@ export class AnunciosService {
     return this.http.get<anuncio[]>(this.url);
   }
 
-  saveAds(ad : anuncio): Observable<anuncio>{
-    return this.http.post<anuncio>(this.url, ad);
+  saveAds(anuncio : anuncio): Observable<anuncio>{
+    return this.http.post<anuncio>(this.url, anuncio);
   }
 }

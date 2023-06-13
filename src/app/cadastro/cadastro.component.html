@@ -1,1 +1,56 @@
-<p>cadastro works!</p>
+<div class="container">
+  <div class="row mb-4 mt-4 text-center">
+    <div class="col"><h2 class="fs-1">Cadastro de Anúncios</h2></div>
+  </div>
+  <div class="row">
+        <div class="col mb-2">
+          <form [formGroup]="formGroupAds">
+          <div class="mb-3">
+            <label for="title" class="form-label">Título do anúncio</label>
+            <input type="text" class="form-control" formControlName="title" id="title" placeholder="Digite aqui o título do anúncio">
+          </div>
+          </form>
+        </div>
+  </div>
+  <div class="row">
+    <div class="col mb-2">
+      <form [formGroup]="formGroupAds">
+        <div class="mb-3">
+          <label for="owner" class="form-label">Empresa do anúncio: </label>
+          <input type="text" class="form-control" formControlName="owner" id="owner" placeholder="Nome da empresa dona do anúncio">
+        </div>
+      </form>
+    </div>
+    <div class="col">
+      <form [formGroup]="formGroupAds">
+        <div class="mb-3">
+          <label for="img" class="form-label">URL da imagem do anúncio: </label>
+          <input type="text" class="form-control" formControlName="img" id="text" placeholder="URL da imagem">
+        </div>
+      </form>
+    </div>
+    <div class="col">
+      <form [formGroup]="formGroupAds">
+        <div class="mb-3">
+          <label for="price" class="form-label">Preço do produto/serviço: </label>
+          <input type="text" class="form-control" formControlName="price" id="price" placeholder="Preço do produto do anúncio">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="mb-3">
+      <form [formGroup]="formGroupAds">
+        <label for="content" class="form-label">Descrição do anúncio: </label>
+        <textarea class="form-control" id="content" formControlName="content" rows="4" style="resize: none;"></textarea>
+      </form>
+    </div>
+  </div>
+  <div class="row text-center mt-3">
+    <div class="col">
+      <form [formGroup]="formGroupAds">
+        <button class="btn btn-primary fs-4" (click)="saveAds()">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+</div>

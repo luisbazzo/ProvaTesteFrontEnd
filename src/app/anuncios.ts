@@ -1,4 +1,5 @@
 export interface anuncio{
+  id : number;
   owner : string;
   title : string;
   img : string;
