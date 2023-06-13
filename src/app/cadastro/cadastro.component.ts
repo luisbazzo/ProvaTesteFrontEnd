@@ -18,7 +18,6 @@ export class CadastroComponent implements OnInit{
                 ){
     this.formGroupAds = formBuilder.group({
       id : [''],
-      owner : [''],
       title : [''],
       img : [''],
       content : [''],
@@ -27,7 +26,16 @@ export class CadastroComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    ;
+    this.loadAds();
+  }
+
+  loadAds(){
+    this.AnunciosService.getAds().subscribe(
+      {
+        next : data => this.Ads = data,
+        error : () => console.log("Erro ao chamar o endpoint")
+      }
+    );
   }
 
   saveAds(){

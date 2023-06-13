@@ -2,11 +2,17 @@
   "anuncios": [
     {
       "id": 1,
-      "owner": "HBO Max",
       "title": "Reveja a final da Champions League a hora que quiser!",
       "img": "https://pbs.twimg.com/media/FySgjKiWIAkzYmS.jpg",
       "content": "Só na HBO Max você consegue rever a final entre Manchester City e Inter de Milão a hora que quiser, além de ter acesso a milhares de filmes e séries! Não perca tempo e assine já!",
       "price": 20.99
+    },
+    {
+      "id": 2,
+      "title": "Lançamento no Amazon Prime Video, assista agora a Creed 3!",
+      "img": "https://m.media-amazon.com/images/G/01/GMEShopping/marinpow/Creed/C3_PUSHHERO_IOS_1038x1038._CB613465389_.jpg",
+      "content": "Direto do cinema para o conforto da sua casa! Assine agora ao Amazon Prime para ver o desfecho final da história do filho de Apolo Creed!",
+      "price": "19.99"
     }
   ]
 }

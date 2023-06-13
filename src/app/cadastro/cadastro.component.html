@@ -3,24 +3,16 @@
     <div class="col"><h2 class="fs-1">Cadastro de Anúncios</h2></div>
   </div>
   <div class="row">
-        <div class="col mb-2">
-          <form [formGroup]="formGroupAds">
-          <div class="mb-3">
-            <label for="title" class="form-label">Título do anúncio</label>
-            <input type="text" class="form-control" formControlName="title" id="title" placeholder="Digite aqui o título do anúncio">
-          </div>
-          </form>
-        </div>
-  </div>
-  <div class="row">
     <div class="col mb-2">
       <form [formGroup]="formGroupAds">
         <div class="mb-3">
-          <label for="owner" class="form-label">Empresa do anúncio: </label>
-          <input type="text" class="form-control" formControlName="owner" id="owner" placeholder="Nome da empresa dona do anúncio">
+          <label for="title" class="form-label">Título do anúncio</label>
+          <input type="text" class="form-control" formControlName="title" id="title" placeholder="Digite aqui o título do anúncio">
         </div>
       </form>
     </div>
+  </div>
+  <div class="row">
     <div class="col">
       <form [formGroup]="formGroupAds">
         <div class="mb-3">
@@ -46,11 +38,25 @@
       </form>
     </div>
   </div>
-  <div class="row text-center mt-3">
+  <div class="row text-center mt-3 mb-5">
     <div class="col">
       <form [formGroup]="formGroupAds">
         <button class="btn btn-primary fs-4" (click)="saveAds()">Cadastrar</button>
       </form>
     </div>
   </div>
+  <h2 class="fs-1 mt-3 mb-5 text-center">Lista de Anúncios</h2>
+  <div class="row justify-content-start">
+    <div class="col-4 mt-3" *ngFor="let ad of Ads">
+      <div class="card" style="width: 18rem;">
+        <img src="{{ad.img}}" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ad.title}}</h5>
+          <p class="card-text">{{ad.content}}</p>
+          <a href="#" class="btn btn-primary">R$ {{ad.price}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5 mb-5"></div>
 </div>
