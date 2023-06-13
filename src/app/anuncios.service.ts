@@ -8,7 +8,7 @@ import { anuncio } from './anuncios';
 })
 export class AnunciosService {
 
-  url = "http://localhost:3000/anuncios";
+  url = "http://localhost:8080/anuncios";
 
   constructor(private http : HttpClient) { }
 

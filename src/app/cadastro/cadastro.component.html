@@ -48,7 +48,7 @@
   <h2 class="fs-1 mt-3 mb-5 text-center">Lista de Anúncios</h2>
   <div class="row justify-content-start">
     <div class="col-4 mt-3" *ngFor="let ad of Ads">
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 18rem; min-height: 600px;">
         <img src="{{ad.img}}" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">{{ad.title}}</h5>
@@ -58,6 +58,5 @@
       </div>
     </div>
   </div>
-  <div class="row mt-5 mb-5">
-  </div>
+  <div class="row mt-5 mb-5"></div>
 </div>
